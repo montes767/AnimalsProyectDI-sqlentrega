@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnimalsProyectDI.MVVM.View.MainPageView"
+             Title="MainPageView">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Entry Placeholder="Name" Text="{Binding CurrentAnimal.Name}"/>
+            <Entry Placeholder="Phone" Text="{Binding CurrentAnimal.Phone}"/>
+            <Button Command="{Binding AddAnimalCommand}" Text="New animal"/>
+            <Button Command="{Binding DeleteSelectedCommand}" Text="Delete animal"/>
+            
+
+
+            <CollectionView ItemsSource="{Binding Animals}" SelectionMode="Single" SelectedItem="{Binding CurrentAnimal}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Frame >
+
+                            <Grid ColumnDefinitions="*,*,*,*,*,*">
+                                <Image Source="{Binding Avatar}" Grid.Column="0" HeightRequest="200" WidthRequest="200"/>
+                                <Label Text="{Binding Type}" Grid.Column="1"/>
+                                <Label Text="{Binding Name}" Grid.Column="2"/>
+                                <Label Text="{Binding Gender}" Grid.Column="3"/>
+                                <Label Text="{Binding Id}" Grid.Column="4"/>
+                                <Label Text="{Binding Phone}" Grid.Column="5"/>
+                            </Grid>
+
+                        </Frame>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
