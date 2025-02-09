@@ -33,7 +33,7 @@ public class MainPageViewModel
     {
         var animal = new Faker<Animal>().RuleFor(c => c.Name, f => f.Person.FirstName)
             .RuleFor(c => c.Phone, f => f.Person.Phone)
-            .RuleFor(c => c.Avatar, f => f.Person.Avatar)
+            .RuleFor(c => c.Avatar, f => f.Person.Avatar= "https://fakeimg.pl/300x200/?text=serrallo")
             .Generate();
 
         return animal;
