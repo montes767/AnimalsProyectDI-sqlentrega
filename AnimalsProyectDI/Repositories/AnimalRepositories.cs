@@ -1,14 +1,8 @@
 ﻿using AnimalsProyectDI.Abstractions;
 using AnimalsProyectDI.MVVM.Model;
-using Microsoft.VisualBasic;
 using SQLite;
 using SQLiteNetExtensions.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AnimalsProyectDI.Repositories
 {

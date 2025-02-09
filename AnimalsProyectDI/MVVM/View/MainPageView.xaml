@@ -7,7 +7,7 @@
         <VerticalStackLayout>
             <Entry Placeholder="Name" Text="{Binding CurrentAnimal.Name}"/>
             <Entry Placeholder="Phone" Text="{Binding CurrentAnimal.Phone}"/>
-            <Button Command="{Binding AddAnimalCommand}" Text="New animal"/>
+            <Button Command="{Binding AddAnimalCommand}" Text="Update animal"/>
             <Button Command="{Binding DeleteSelectedCommand}" Text="Delete animal"/>
             
 
@@ -23,7 +23,7 @@
                                 <Label Text="{Binding Type}" Grid.Column="1"/>
                                 <Label Text="{Binding Name}" Grid.Column="2"/>
                                 <Label Text="{Binding Gender}" Grid.Column="3"/>
-                                <Label Text="{Binding Id}" Grid.Column="4"/>
+                                <Label Text="{Binding Id}" Grid.Column="4"/>    
                                 <Label Text="{Binding Phone}" Grid.Column="5"/>
                             </Grid>
 

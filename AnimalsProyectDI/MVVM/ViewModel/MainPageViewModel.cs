@@ -33,7 +33,7 @@ public class MainPageViewModel
     {
         var animal = new Faker<Animal>().RuleFor(c => c.Name, f => f.Person.FirstName)
             .RuleFor(c => c.Phone, f => f.Person.Phone)
-            .RuleFor(c => c.Avatar, f => f.Person.Avatar= "https://fakeimg.pl/300x200/?text=serrallo")
+            .RuleFor(c => c.Avatar, f => f.PickRandom(new string[]{ "https://fakeimg.pl/300x200/?text=serrallo", "https://fakeimg.pl/300x200/?text=sotrondio", "https://fakeimg.pl/300x200/?text=mieres" }))
             .Generate();
 
         return animal;
@@ -102,7 +102,7 @@ public class MainPageViewModel
     
 
 
-    public ICommand DeleteSelectedCommand => new Command(async () =>
+    public ICommand DeleteSelectedCommand => new Command( () =>
     {
         App.AnimalRepository.Delete(CurrentAnimal);
 
